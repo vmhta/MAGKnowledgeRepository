@@ -24,5 +24,29 @@ namespace MagKnowledge.Git
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            AccountDetails.AccountWindow win = new AccountDetails.AccountWindow();
+            win.Show();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            BalanceDetails.BalanceWindow win = new BalanceDetails.BalanceWindow();
+            win.Show();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            CreditDebit.CreditDebitAccount win = new CreditDebit.CreditDebitAccount();
+            win.Show();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            Interest1.InterestForm win = new Interest1.InterestForm();
+            win.Show();
+        }
     }
 }
