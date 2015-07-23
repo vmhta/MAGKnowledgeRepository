@@ -13,7 +13,7 @@ namespace MagKnowledge.Git.CreditDebit
             using (MagDBEntities dbEntities = new MagDBEntities())
             {
                 int id = dbEntities.UserDetails.Where(p => p.UserName == userName && p.Password == password).Select(p => p.Id).FirstOrDefault();
-                if (id != null && id > 0)
+                if (id > 0)
                 {
                     int balance = dbEntities.AccountInformations.Where(p => p.UserId == id && p.IsCurrent== isCurrent).Select(p => p.Id).FirstOrDefault();
                     return balance;

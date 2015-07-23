@@ -42,5 +42,11 @@ namespace MagKnowledge.Git
             CreditDebit.CreditDebitAccount win = new CreditDebit.CreditDebitAccount();
             win.Show();
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            Interest1.InterestForm win = new Interest1.InterestForm();
+            win.Show();
+        }
     }
 }
