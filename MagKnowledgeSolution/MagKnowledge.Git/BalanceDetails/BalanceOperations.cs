@@ -15,7 +15,7 @@ namespace MagKnowledge.Git.BalanceDetails
                 int id = dbEntities.UserDetails.Where(p => p.UserName == userName && p.Password == password).Select(p => p.Id).FirstOrDefault();
                 if (id != null && id > 0)
                 {
-                    double balance = dbEntities.AccountInformations.Where(p => p.UserId == id && isCurrent).Select(p => p.Balance).FirstOrDefault();
+                    double balance = dbEntities.AccountInformations.Where(p => p.UserId == id && p.IsCurrent==isCurrent).Select(p => p.Balance).FirstOrDefault();
                     return balance;
                 }
                 else
